@@ -6,6 +6,8 @@ import '../Front.css';
 import { getDataFromServer } from "../Actions"; //101 nepamirst susiimportint is Actions
 import reducer from "../Reducers/reducer";//101 rusiuojam su serveriu
 
+
+
 function Front({ show }) {
 
     //cia taip atrode be rusiavimo vardo ir kainos
@@ -61,10 +63,11 @@ function Front({ show }) {
             <nav className="navbar">
                 <a className="nav-linkk" href="/">Manikiūras Tau...</a>
                 <div className="navbar-man ">
-                     <Link className="nav-link" to="/">Visi</Link>  {/*//a.butinas linkams (<Link className="nav-link" to="/">Home</Link>)*/}
+                    <Link className="nav-link" to="/">Visi</Link>  {/*//a.butinas linkams (<Link className="nav-link" to="/">Home</Link>)*/}
                     <Link className="nav-link" to="/klasikinis">Klasikinis</Link>{/*//a.butinas linkams /leaf nurodo kaip i ji patekti i http://localhost:3000/leaf*/}
                     <Link className="nav-link" to="/prancuziskas">Prancūziškas</Link>{/*a.<Link> ir isrusiuoja */}
                     <Link className="nav-link" to="/kombinuotas">Kombinuotas</Link>{/* a.<Link> ir isrusiuoja */}
+                    <Link className="nav-link" to="/create">Create</Link>{/* a.<Link> ir isrusiuoja */}
                 </div>   
             </nav>
         </div>

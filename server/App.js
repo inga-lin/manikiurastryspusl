@@ -192,7 +192,7 @@ app.get("/manikiuro-list-search", (req, res) => {
 });
 
 
-/////////////////////////////
+//////////////////////////////
 //////////////////////////////
 app.listen(port, () => {//1-pati pradzia
   console.log(`Example app listening on port ${port}`);

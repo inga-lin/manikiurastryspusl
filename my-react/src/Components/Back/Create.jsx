@@ -1,6 +1,10 @@
 import { useState } from "react";
+
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 //3
-function Create({setCreateData}) {
+function Create({setLastUpdate}) {
     //kiek laukeliu returne tiek turim tureti useState(react xxx)
     const [ vardas, setVardas] = useState('');
     const [ tipas, setTipas] = useState("1");
@@ -8,6 +12,24 @@ function Create({setCreateData}) {
     const [ trukme, setTrukme] = useState('');
     const [ nuotrauka, setNuotrauka] = useState('');
 
+
+    //////
+    const [createData, setCreateData] = useState(null);
+
+    let navigate =useNavigate()
+    useEffect(() => {
+        if (null === createData) {
+          return;
+        }
+        axios.post('http://localhost:3003/manikiuro-salonas', createData)
+        .then(res => {
+          console.log(res);
+          //setLastUpdate(Date.now());
+          navigate('/');
+    
+        });
+    },[createData]);
+    /////
 
     //3.kas nutiks kai paspausiu mygtuka(issisaugos sita info)
     const buttonHandler = () => {

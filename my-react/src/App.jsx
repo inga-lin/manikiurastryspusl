@@ -1,9 +1,10 @@
 import Back from "./Components/Back";
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import Front from "./Components/Front";
+import Create from "./Components/Back/Create";
 
 function App() {
-
+  
   return (
     <BrowserRouter>
       <Routes>
@@ -12,6 +13,7 @@ function App() {
         <Route path="klasikinis" element={<Front show="klasikinis"/>} /> {/*a.<Link> ir isrusiuoja//b.show yra propsas kuri perduodam i Front.jsx*/}
         <Route path="prancuziskas" element={<Front show="prancuziskas"/>} /> {/*a.<Link> ir isrusiuoja//b.show yra propsas kuri perduodam i Front.jsx*/}
         <Route path="kombinuotas" element={<Front show="kombinuotas"/>} /> {/*a.<Link> ir isrusiuoja//b.show yra propsas kuri perduodam i Front.jsx*/}
+        <Route path="/create" element= {<Create></Create>} /> 
       </Routes>
     </BrowserRouter>
   )
