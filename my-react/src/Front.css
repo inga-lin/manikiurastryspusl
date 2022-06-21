@@ -148,4 +148,8 @@
    width: 100px;
    height: 100px;
  }
+
+ .col-2 > span {
+    font-weight: bold;
+ }
  /*Išrūšuoti */
