@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";//susiimportint <Link>
 //3
@@ -45,6 +45,7 @@ function Create() {
 ////////////////////////
 /////////////////////////
     //cia uzpildzius lentele grazins i pradini puslapi
+    //import { useNavigate } from "react-router-dom";
     //function Create() {
         //kiek laukeliu returne tiek turim tureti useState(react xxx)
     //const [ vardas, setVardas] = useState('');
