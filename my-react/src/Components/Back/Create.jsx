@@ -107,21 +107,22 @@ function Create() {
         }
     }
 
-    return(
-        <div className="stulpeliu-vaikas2">
-                    <div className="container1 ">
-            <nav className="navbar">
-                <a className="nav-linkk" href="/">Manikiūras Tau...</a>
-                <div className="navbar-man ">
-                    <Link className="nav-link" to="/">Visi</Link>  {/*//a.butinas linkams (<Link className="nav-link" to="/">Home</Link>)*/}
-                    <Link className="nav-link" to="/klasikinis">Klasikinis</Link>{/*//a.butinas linkams /leaf nurodo kaip i ji patekti i http://localhost:3000/leaf*/}
-                    <Link className="nav-link" to="/prancuziskas">Prancūziškas</Link>{/*a.<Link> ir isrusiuoja */}
-                    <Link className="nav-link" to="/kombinuotas">Kombinuotas</Link>{/* a.<Link> ir isrusiuoja */}
-                    <Link className="nav-link" to="/create">Create</Link>{/* a.<Link> ir isrusiuoja */}
-                </div>   
-            </nav>
-        </div>
-            <div className="titleee">
+return(
+    <>        <div className="container1 ">
+    <nav className="navbar">
+        <a className="nav-linkk" href="/">Manikiūras Tau...</a>
+        <div className="navbar-man ">
+            <Link className="nav-link" to="/">Visi</Link>  {/*//a.butinas linkams (<Link className="nav-link" to="/">Home</Link>)*/}
+            <Link className="nav-link" to="/klasikinis">Klasikinis</Link>{/*//a.butinas linkams /leaf nurodo kaip i ji patekti i http://localhost:3000/leaf*/}
+            <Link className="nav-link" to="/prancuziskas">Prancūziškas</Link>{/*a.<Link> ir isrusiuoja */}
+            <Link className="nav-link" to="/kombinuotas">Kombinuotas</Link>{/* a.<Link> ir isrusiuoja */}
+            <Link className="nav-link" to="/create">Create</Link>{/* a.<Link> ir isrusiuoja */}
+        </div>   
+    </nav>
+</div>
+    <div className="stulpeliu-vaikas2">
+
+            <div className="titleee createtitle">
                 <h2>Add New Manikiuras </h2>
             </div>
             <div className="sarasas">
@@ -156,6 +157,7 @@ function Create() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 export default Create;

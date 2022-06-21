@@ -100,7 +100,7 @@ useEffect(() => {
     <>
     <div className="p-contai">
       <div className="stulpeliu-tevas">
-        <Create setCreateData={setCreateData}></Create>{/*3.setCreateData*/}
+        {/*<Create setCreateData={setCreateData}></Create>3.setCreateData*/}
         <div className="stulpeliu-vaikas1">
           <div className="titleee">
             <h2>Manikiuras list</h2>
