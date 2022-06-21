@@ -9,6 +9,8 @@ import reducer from "../Reducers/reducer";//101 rusiuojam su serveriu
 
 
 function Front({ show }) {
+    //////123spalvu keitimas
+    const [select1, setSelect1] = useState('');
 
     //cia taip atrode be rusiavimo vardo ir kainos
     //const [manikiuras, setManikiuras] = useState([]);//2.-22. -----sitas buvo kol nebuvo rusiavimas reikalingas
@@ -56,9 +58,14 @@ function Front({ show }) {
         });
     }
 
+
+//////123spalvu keitimas
+    const changeSelect1 = e => {
+        setSelect1(e.target.value);
+    }
     return(
     <>
-        <div className="p-contai con-pagri">
+        <div className="p-contai con-pagri" >{/*//////123spalvu keitimas*/}
         <div className="container1 ">
             <nav className="navbar">
                 <a className="nav-linkk" href="/">Manikiūras Tau...</a>
@@ -71,7 +78,7 @@ function Front({ show }) {
                 </div>   
             </nav>
         </div>
-            <div className="stulpeliu-tevass">
+            <div className="stulpeliu-tevass" >
                 <div className="stulpeliu-vaikas1">
                     <div className="titleee titleees">
                         <h2>Manikiūrai</h2>
@@ -80,10 +87,18 @@ function Front({ show }) {
                        {/*<label>Search</label>*/}
                        <input type="text" className="form-control" onChange={doSearch} value={search} placeholder="Ieškoti pagal vardą" />
                     </div>
-                    <div className="sarasass sar">
-                        <ul className="ull">
+                    <select value={select1} onChange={changeSelect1}>{/*//////123spalvu keitimas*/}
+                        <option value='red'>Red</option>
+                        <option value='blue'>Blue</option>
+                        <option value='yellow'>Yellow</option>
+                        <option value='pink'>Pink</option>
+                        <option value='green'>Green</option>
+                        <option value='black'>Black</option>
+                    </select>
+                    <div className="sarasass sar" style={{color:select1}}>
+                        <ul className="ull ">
                             {
-                                manikiuras.map(m => <ManikiuroListoAtvaizdavimasFronte key={m.id} manikiuras={m}></ManikiuroListoAtvaizdavimasFronte>)//2 bendraujam su serveriu ir issitraukiam info//5. ManikiuroListoAtvaizdavimas//6.setIstrintiId istrinsim eilutes info
+                                manikiuras.map(m => <ManikiuroListoAtvaizdavimasFronte  key={m.id} manikiuras={m}></ManikiuroListoAtvaizdavimasFronte>)//2 bendraujam su serveriu ir issitraukiam info//5. ManikiuroListoAtvaizdavimas//6.setIstrintiId istrinsim eilutes info
                             }
                         </ul>
                     </div>
