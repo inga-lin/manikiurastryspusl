@@ -72,7 +72,7 @@ option:hover {
   margin: 20px;
   width: 500px;
   border-radius: 20px;
-  background-color: red;
+  margin-left: calc(50% - 250px);
 }
 
 .container1 {
